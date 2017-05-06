@@ -6,13 +6,12 @@ class ArtistElement extends Component{
 		if(this.props.thumbnail != null)
 		var image = this.props.thumbnail.url;
 		return (
-			<div>
-				<img src={image}/>
-				<Link to={`/artist/${this.props.id}`} >
-				hi
-				</Link>
-				{this.props.name}
-			</div>
+			<Link to={`/${this.props.xtype}/${this.props.id}`} >
+				<div className="artist-wrapper">
+					<img src={image}/>
+					{this.props.name}
+				</div>
+			</Link>
 			);
 	}
 

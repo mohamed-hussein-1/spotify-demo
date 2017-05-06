@@ -5,9 +5,10 @@ class Albums extends Component {
 	state = {searchQuery:'',albums:[]};
 	render() {
 		return (
-			<div>
-    			<input type='text' onKeyPress={this._handleKeyPress} />
-                <ArtistsList type='Album' artists={this.state.albums}/>
+			<div className="albums-wrapper">
+                <h1>Search for Albums</h1>
+    			<input className="search-form" type='text' onKeyPress={this._handleKeyPress} />
+                <ArtistsList type='album' artists={this.state.albums}/>
 			</div>
 		);
 	}

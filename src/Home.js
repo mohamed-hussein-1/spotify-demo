@@ -6,7 +6,10 @@ class Home extends Component {
 	state = {artists : []};
 	render() {
 		return (
-			<ArtistsList artists={this.state.artists}/>
+			<div className="home-wrapper">
+				<h1>Top Artists</h1>
+				<ArtistsList type="artist" artists={this.state.artists}/>
+			</div>
 		);
 	}
 	componentWillMount(props){
@@ -15,7 +18,7 @@ class Home extends Component {
 		{
 			params : 
 			{
-				q : 'linkin park',
+				q : 'q',
 				type : 'artist',
 				limit : 50
 			}

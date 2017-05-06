@@ -1,0 +1,188 @@
+body {
+  color: black;
+  font-family: helvetica neue,helvetica;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 21px;
+}
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+.SideBar{
+	width: 16%;
+	float: left;
+	background-color: black;
+	position: fixed;
+    height: 100vh;
+}
+.Main{
+	width: 84%;
+	float: right;
+	background-color: #1f1f1f;
+	min-height: 100vh;
+  color: white;
+  text-align: left;
+}
+.Main::after{
+	content:' ';
+	clear: both;
+}
+.Main > div{
+  text-align: left;
+  padding-left: 30px;
+}
+.SideBar .logo{
+	background: url(logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 88%;
+    height: 0;
+    padding-top: 36.64%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.SideBar nav ul{
+	list-style-type: none;
+	margin: 0 auto;
+    padding-left: 0;
+
+}
+.SideBar nav ul li a{
+	color: white;
+}
+
+
+
+
+.albums-wrapper h1{
+    font-size: 48px;
+    letter-spacing: 0px;
+    color: white;
+}
+.albums-wrapper .search-form{
+	border-radius: 26px;
+    height: 38px;
+    width: 300px;
+    box-shadow: none;
+    border-width: 0px;
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+
+
+.artists-wrapper{
+  text-align: left;
+}
+.artist-wrapper{
+	display: inline-block;
+    width: 23%;
+    margin-right: 15px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    vertical-align: top;
+    color: white;
+    text-align: center;
+}
+.artist-wrapper img{
+	width: 100%;
+  height: 248px; /*sorry*/
+}
+
+.album{
+  padding-top: 35px;
+}
+.album-info{
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+}
+.album-tracks{
+  display: inline-block;
+  width: 70%;
+  vertical-align: top;
+}
+.album-info span{
+  display: inline-block;
+  width: 100%
+}
+.button{
+  background-color: #2ebd59;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    transition: background-color .2s;
+    font-weight: 500;
+    margin-right: 10px;
+}
+.artist h1{
+  font-size: 48px;
+  letter-spacing: 0px;
+  color: white;
+}
+.tracks-table{
+  border-spacing: 0;
+}
+.tracks-table tr{
+  overflow: hidden;
+}
+
+.tracks-table td{
+  padding:10px;
+}
+.tr-click:hover{
+  background-color : black;
+  cursor: pointer;
+}
+
+.music-player-wrapper{
+  position: fixed;
+  bottom:0;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  text-align: left;
+}
+.music-player-info{
+  width: 200px;
+  display: inline-block;
+}
+.music-player-info span{
+  display: inline-block;
+  color: white;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 107px;
+}
+.player-control {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0px;
+    right: 0;
+    display: inline-block;
+    width: 405px;
+    text-align: center;
+}
+.progress-bar {
+  margin-top: 15px; 
+    width: 50%;
+    height: 5px;
+    background: white;
+    margin: auto;
+    width: 100%;
+}
+.progress-bar span{
+    width: 0%;
+    background-color: #00da00;
+    /* display: inline-block !important; */
+    height: 100%;
+    /* text-align: left; */
+    float: left;
+}

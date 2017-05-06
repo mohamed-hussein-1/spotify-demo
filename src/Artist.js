@@ -23,17 +23,33 @@ class Artist extends Component{
 		});
 	}
 	render(){
+		console.log("albums");	
+		console.log(this.state.albums);
 		return(
-			<div>
-
-				<div>
-					
-					{this.state.tracks.map((e,i) =>
-					 (<TrackListItem name={e.name} duration={Util.millisToMinutesAndSeconds(e.duration_ms)} 
-					 	startPlaying={() => this.props.startPlaying(e)} key={i}/>))}
+			<div className="artist">
+				
+				<div className="tracks-wrapper">
+				<h1>Top Tracks</h1>
+					<table className="tracks-table">
+						<tbody>
+							{this.state.tracks.map((e,i) =>
+							 (<TrackListItem name={e.name} duration={Util.millisToMinutesAndSeconds(e.duration_ms)} 
+							 	startPlaying={() => this.props.startPlaying(e)} key={i}/>))}
+						</tbody>
+					</table>
 				</div>
-				<div>
-					{this.state.albums.map((e,i) => (<Link to={`/album/${e.id}`} key={i}>{e.name}</Link>))} 
+				<div className="top-albums-wrapper">
+					<h1>Top Albums</h1>
+						{
+							this.state.albums.map((e,i) => (
+								<Link to={`/album/${e.id}`} key={i}>
+									<div className="artist-wrapper">
+										<img src={e.images[1].url || null}/>
+										{e.name}
+									</div>
+								</Link>
+								))
+						}
 				</div>
 				
 			</div>
