@@ -4,10 +4,10 @@ import Albums from './Albums';
 import Artists from './Artists';
 import Artist from './Artist';
 import Album from './Album';
-import { Link , Route , Switch } from 'react-router-dom';
-import ReactPlayer from 'react-player';
-import MusicPlayer from './MusicPlayer';
-import Util from './Util';
+import { Route , Switch } from 'react-router-dom';
+
+
+
 
 
 class Main extends Component {

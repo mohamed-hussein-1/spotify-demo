@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import SideBar from './SideBar';
 import Main from './Main'
 import './App.css';
-import { BrowserRouter} from 'react-router-dom';
+import { BrowserRouter,Route} from 'react-router-dom';
 import ReactPlayer from 'react-player';
 import MusicPlayer from './MusicPlayer';
 import Util from './Util';
@@ -13,7 +13,11 @@ class App extends Component {
     return (
       <BrowserRouter>
 	      <div className="App">
-	        <SideBar />
+        <Route render={(props)=> (
+ 
+	        <SideBar {...props}/>
+
+        )}/>
 	        <Main class="content-wrapper" startPlaying={this.startPlaying}/>
           <div className="music-player-wrapper">
             {this.state.showPlayer ? <MusicPlayer url={this.state.url} name={this.state.name}

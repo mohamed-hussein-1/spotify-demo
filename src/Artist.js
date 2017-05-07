@@ -23,8 +23,6 @@ class Artist extends Component{
 		});
 	}
 	render(){
-		console.log("albums");	
-		console.log(this.state.albums);
 		return(
 			<div className="artist">
 				

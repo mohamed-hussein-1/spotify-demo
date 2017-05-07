@@ -51,7 +51,9 @@ a {
 .SideBar nav ul li a{
 	color: white;
 }
-
+.SideBar nav ul li a.active{
+  color: grey;
+}
 
 
 
@@ -145,12 +147,12 @@ a {
   position: fixed;
   bottom:0;
   left: 0;
-  background-color: black;
+  background-color: #171616;
   width: 100%;
   text-align: left;
 }
 .music-player-info{
-  width: 200px;
+  width: 500px;
   display: inline-block;
 }
 .music-player-info span{
@@ -186,3 +188,12 @@ a {
     /* text-align: left; */
     float: left;
 }
+.player-control a{
+  color: white;
+  padding-bottom: 10px;
+  display: inline-block;
+  padding-top: 10px;  
+}
+/*font awesome icons instead of downloading the whole library*/
+
+

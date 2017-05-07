@@ -5,7 +5,8 @@ class MusicPlayer extends Component{
 	state = {url:'',playing:true,played:0 , duration:0};
 	render(){
 		var current_dur = Math.floor(this.state.played)/Math.floor(this.state.duration) * 100;
-		var pause = <i className="fa fa-pause" aria-hidden="true"></i>;
+		const pause = <i className="fa fa-pause" aria-hidden="true"></i>;
+		const play = <i className="fa fa-play" aria-hidden="true"></i>;
 		return (
 			<div>
 				<div className="music-player-info">
@@ -14,7 +15,7 @@ class MusicPlayer extends Component{
 				</div>
 				
 				<div className="player-control">
-					<a href="#" onClick={this.playPause}>{this.state.playing ? pause:"play"}</a>
+					<a href="#" onClick={this.playPause}>{this.state.playing ? pause:play}</a>
 					<div className="progress-bar" ><span style={{width:current_dur+"%"}}></span></div>
 				</div>
 				<ReactPlayer style={{display:"none"}}
